@@ -1,9 +1,18 @@
-function add(n1: number, n2: number, showResult, phrase) {
-  const result = n1 + n2;
-  showResult ? console.log(phrase + result) : console.log("falseだよ");
+let userInput: unknown;
+let userName: string;
+
+userInput = 5;
+userName = "yuma";
+
+//unknon型はif文を用いてチェックしないと代入することはできない
+//anyならチェックなしで代入できる
+if (typeof userInput === "string") {
+  userName = userInput;
 }
 
-const printResult = true;
-const resultString = "Result: ";
+function generateError(message: string, code: number): never {
+  throw { message: message, errorCode: code };
+}
 
-add(10, 5, printResult, resultString);
+const result = generateError("error happend!", 500);
+console.log(result);

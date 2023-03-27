@@ -1,7 +1,14 @@
-function add(n1, n2, showResult, phrase) {
-    var result = n1 + n2;
-    showResult ? console.log(phrase + result) : console.log("falseだよ");
+var userInput;
+var userName;
+userInput = 5;
+userName = "yuma";
+//unknon型はif文を用いてチェックしないと代入することはできない
+//anyならチェックなしで代入できる
+if (typeof userInput === "string") {
+    userName = userInput;
 }
-var printResult = true;
-var resultString = "Result: ";
-add(10, 5, printResult, resultString);
+function generateError(message, code) {
+    throw { message: message, errorCode: code };
+}
+var result = generateError("error happend!", 500);
+console.log(result);
