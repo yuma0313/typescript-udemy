@@ -1,5 +1,6 @@
-var userInput;
-var userName;
+"use strict";
+let userInput;
+let userName;
 userInput = 5;
 userName = "yuma";
 //unknon型はif文を用いてチェックしないと代入することはできない
@@ -10,5 +11,5 @@ if (typeof userInput === "string") {
 function generateError(message, code) {
     throw { message: message, errorCode: code };
 }
-var result = generateError("error happend!", 500);
+const result = generateError("error happend!", 500);
 console.log(result);

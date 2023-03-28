@@ -1,13 +1,13 @@
 let userInput: unknown;
-let userName: string;
+let user_name: string;
 
 userInput = 5;
-userName = "yuma";
+user_name = "yuma";
 
 //unknon型はif文を用いてチェックしないと代入することはできない
 //anyならチェックなしで代入できる
 if (typeof userInput === "string") {
-  userName = userInput;
+  user_name = userInput;
 }
 
 function generateError(message: string, code: number): never {
